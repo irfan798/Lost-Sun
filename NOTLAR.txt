@@ -1,0 +1,38 @@
+ _   _  _____  _     _  _  ___       ___    _   _  _   _  ___    ___   
+( ) ( )(  _  )( )   ( )(_)(  _`\    (  _`\ ( ) ( )( ) ( )(  _`\ (  _`\ 
+| |/'/'| (_) |`\`\_/'/'| || |_) )   | ( (_)| | | || `\| || (_(_)| (_(_)
+| , <  |  _  |  `\ /'  | || ,__/'   | |___ | | | || , ` ||  _)_ `\__ \ 
+| |\`\ | | | |   | |   | || |       | (_, )| (_) || |`\ || (_( )( )_) |
+(_) (_)(_) (_)   (_)   (_)(_)       (____/'(_____)(_) (_)(____/'`\____)
+                                                                       
+                                                                       
+
+!!Çalýþmasý için klasörde bulunan "gifAnimation" klasörü processing libraries klasörüne atýlmadý, bu windows için documents/processing/libraries!!
+
+/////////////////////////////
+Harita editörünü kullanýrkan:
+
+fare sol týk nesne yerleþtiriyor
+fare sað týk nesne tipini deðiþtiriyor
+WASD ile yukarý aþaðý
+p tuþuna basýnca farenin gezdiði yerlere nesne yerleþtir
+o tuþu ile yukarýdakini durdur
+x ile kaydediyor harita.txt olarak
+map[0-7] arasýna koyarak bakabilirsiniz haritanýza
+/////////////////////////////
+
+Bir kaç deðinmek istediðimiz nokta:
+
+-Haritanýn kayma hýzý sabit deðil, kenarlara yaklaþtýkca aradaki uzaklýðýn azlýðýnýn kübü ile doðru orantýlý hýzý. Yani hiçbir zaman haritanýn kayýþ hýzýný geçemessin
+-Atýlan ateþ toplarý "tam olarak" geldiði açýdan dönmeye devam ediyor, atýldýklarýnda 0.99 sürtünme var çünkü istenilen noktaya ivmesinden gidememesi gibi bir bug çözüldü
+-Geçiþlerde resim efektleri uygulandý ve yazýlan fonksyonlar oldukça esnek
+-Toplarýn dönüþünü saðlayan fonksyon da oldukça esnek.
+-Projenin uzun sürmesinin nedeni tüm fonksyonlarý ve klaslarý esnek yapmaya çalýþmamýz, bu esnekliðin bir örneðini son bölümde görebilirsiniz!
+""Son bölüme gelmenizi þiddette tavsiye ediyoruz""
+
+#########################################################################################
+####################################### Ýrfan Bilaloðlu #################################
+######################################## Kemal Aydýn ####################################
+######################################### Ugur Kurt #####################################
+#########################################################################################
+
