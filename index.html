@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Lost-sun by kemalaydin</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Lost-sun</h1>
+        <p>Processing Basit Oyun Motoru</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/kemalaydin/Lost-Sun" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/kemalaydin/Lost-Sun/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/kemalaydin/Lost-Sun/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3>
+<a name="lost-sun-processing-oyun-moturu" class="anchor" href="#lost-sun-processing-oyun-moturu"><span class="octicon octicon-link"></span></a>Lost Sun Processing Oyun Moturu</h3>
+
+<p>Processing ve java dilinin nimetlerinden yararlanarak yazılmıştır.Basit bir oyun motorudur. Sadece grafikleri değiştirerek bile oyuna şekil verebilir veya yazmış olduğumuz sınıfları kendi projenizde kullanabilirsiniz. Sistem tamamen değişken odaklı çalışıp her bir canavar,oyuncu,silah,zemin, blok nesne görevi görmektedir. Paketin içerisinde ayrıca Map Creator mevcuttur. Zahmetsiz bir biçimde sadece tıklamalarla yeni haritalar oluşturabilir bu haritaları oyun içerisinde kullanabilirsiniz. </p>
+
+<h2>
+<a name="map-creator" class="anchor" href="#map-creator"><span class="octicon octicon-link"></span></a>Map Creator</h2>
+
+<p>Yeni bir harita oluşturmanızı, yaratmanızı sağlar. </p>
+
+<h1>
+<a name="kullan%C4%B1m%C4%B1" class="anchor" href="#kullan%C4%B1m%C4%B1"><span class="octicon octicon-link"></span></a>Kullanımı</h1>
+
+<p>maps klasörü içerisindeki maps.pde dosyasında kaynak kodlar mevcuttur. Çalıştırdıktan sonra sizi karelerle çevrilmiş bir ekran karşılar. Karelerin herhangi bir yerine tıkladığınız taktirde sistem otomatik olarak nesneyi o kareye ortalayarak yerleştirecek ve koordinatlarını hafızasına alacaktır. </p>
+
+<ol>
+<li>
+<strong>Tuşlar</strong>
+Map creator kullanırken şu tuşlardan yararlanacaksınız,</li>
+</ol><p><strong>p</strong> tuşuna bastığınız taktirde sürekli eklemeyi aktif etmiş olursunuz, yani mouse karelerin üstünde gezdirdikçe nesneleri kendisi otomatik olarak(Tıklamanıza gerek kalmadan) ekleyecektir. Bu özelliği kapatmak için <strong>o</strong> tuşuna basmanız yeterlidir. <strong>sol tıklama</strong> nesneyi haritaya ekler. Nesneyi değiştirmek için <strong>sağ tıklamanız</strong> yeterlidir (Varsayılan nesne : buzlu blok, 1. sağ tık : normal blok, 2. sağ tık düşman, 3. sağ tık Bölüm anahtarı ). Haritanızı x ve y koordinatlarında genişletmek için <strong>w,a,s,d</strong> tuşlarını kullanabilirsiniz. Haritanızı kaydetmek için x tuşuna basmanız yeterlidir. Bundan sonra harita.txt dosyanızı sistem sizin için hazırlayacak ve size sunacaktır.</p>
+
+<p>** Haritanın Oyuna Entegre Edilmesi **
+Haritanızı oluşturduktan sonra aynı klasörde bulunan harita.txt klasörü içerisinde alt alta bir çok değer göreceksiniz. Bu dosyadaki kodları kopyalayıp oyun dosyanızda bulunan ** data ** klasörünüzde yeni bir map dosyası oluşturarak içine yapıştırın. ( Lost-Sun oyununda var sayılan dosya ismi mapSeviye.txt (map1.txt) şeklindedir ) kodlar varsayılan olarak 8 level üzerinden gelecektir. Yeni bir seviye ekledikten sonra seviyenin aktif olarak oynanabilmesi için ** KAYIPGUNES.pde ** dosyasında bulunan ** toplamLevelSayisi ** değişkenini son seviyenize göre düzenleyin. Oyununuz başladığında oluşturduğunuz map oynanır durumda olacaktır.</p>
+
+<p>** harita.txt dosyasının içeriği **
+Bu dosyada oluşturduğunuz haritanın koordinat ve nesne bilgileri tutulmaktadır ve her 3 satır bir nesnenin koordinatını ve türünü belirtmektedir. Örneğin ;</p>
+
+<ul>
+<li>0</li>
+<li>0</li>
+<li>1</li>
+<li>50</li>
+<li>0</li>
+<li>2</li>
+<li>100</li>
+<li>0</li>
+<li>3</li>
+<li>150</li>
+<li>0</li>
+<li>4</li>
+</ul><p>bu kodları şöyle açıklayacağım ;</p>
+
+<ul>
+<li>0     -&gt; Nesnenin x koordinatı</li>
+<li>0     -&gt; Nesnenin y Koordinatı</li>
+<li><p>1     -&gt; Nesnenin Türü ( Canavar, Blok vs. )</p></li>
+<li><p>50     -&gt; Nesnenin x koordinatı</p></li>
+<li>0      -&gt; Nesnenin y Koordinatı</li>
+<li><p>2      -&gt; Nesnenin Türü ( Canavar, Blok vs. )</p></li>
+<li><p>100   ....</p></li>
+<li>0   ....</li>
+<li><p>3   ....</p></li>
+<li><p>150   ....</p></li>
+<li>0   ....</li>
+<li>4   ....</li>
+</ul><p>Dosyaların içerisinde açıklama satırları hala bulunmaktadır. Silmeye üşendik. </p>
+
+<p>** Oyun içerisindeki silah nesnesi atılan açıya göre dönüş yapmaktadır. **</p>
+
+<h2>
+<a name="oyunun-senaryosu" class="anchor" href="#oyunun-senaryosu"><span class="octicon octicon-link"></span></a>Oyunun Senaryosu</h2>
+
+<p>Güneşi buz canavarları söndürmüştür ve insanlık için tek umut SENSİN! Buz canavarları insanları toplayarak bir mağaraya hapseder ve sen bu insanlar içinden kaçmış, güneşi kurtaracak kişisin. Oyun bu nedenle mağarada başlar ve bir seviyeden sonra yer yüzünde devam eder. Oyun sana başlangıçta 3 adet güneş kapsülü vermektedir ve atlayacağın her level için +1 final level için +3 tane daha verecektir. Elinde ki güneş kapsüllerini akıllıca kullanman gerek çünkü senin canını onların sayısı belirler. Düşme veya canavara ateş etme-çarpma sonrasında 1 güneş kapsülün harcanmış olur. Bölümleri geçebilmek için o kapsüllere ihtiyacın var level atlaman için güneş kapsüllerinin meşaleyi yakması ( değmesi ) gerekmektedir. Hadi durma! Kurtar güneşi!!</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/kemalaydin">kemalaydin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
